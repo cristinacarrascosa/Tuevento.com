@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Audiowide";
+    src: url(/Audiowide-Regular.ttf);
+  }
+
+  div{
+    font-size: 1em;
+    color: black;
+    box-sizing: border-box;
+  }
+
+  #contenedor{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 70%;
+    height: 700px;
+    margin: 0 auto;
+  }
+
+  #cabezera{
+    height: 15%;
+    border: solid blue;
+    background-color: lightgray
+  }
+
+  #menu_lateral{
+    float: left;
+    width: 20%;
+    height: 60%;
+    border: solid green 4px;
+    background-color: greenyellow;
+  }
+
+  #contenido{
+    width: 80%;
+    height: 60%;
+    border: solid red 4px;
+    background-color: lightskyblue;
+    float: left;
+    }
+
+  
+
+  #pie{
+    clear: both;
+    height: 10%;
+    border: solid blue 4px;
+    background-color: mediumorchid;
+  }
+
+  h1{
+      text-align: center;
+  }
+  
