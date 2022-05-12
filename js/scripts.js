@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    
+    // VXZCVXCVXVCXV
 
 
     // Collapse responsive navbar when toggler is visible
