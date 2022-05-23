@@ -102,6 +102,18 @@ h6,
     transition: .5s;
 }
 
+#gastronomia{
+    height: 20px;
+    font-family: 'Oswald', sans-serif;
+    padding: 30px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--light);
+    outline: none;
+    transition: .5s;
+}
+
 .sticky-top.navbar-dark .navbar-nav .nav-link {
     padding: 20px 15px;
 }
