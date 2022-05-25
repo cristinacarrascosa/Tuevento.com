@@ -67,7 +67,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-0">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <h1 class="m-0 text-uppercase text-white"><i class="fa fa-birthday-cake fs-1 text-primary me-3"></i>CakeZone</h1>
+            <h1 class="m-0 text-uppercase text-white"><i class="fa fs-1 text-primary me-3"></i>TuEvento</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -76,16 +76,7 @@
             <div class="navbar-nav ms-auto mx-lg-auto py-0">
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="gastronomia.html" class="nav-item nav-link">Gastronomia</a>
-                <div class="nav-item dropdwon">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Espacios</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="cartuja_ara_cristi.html" class="dropdown-item">Cartuja de Ara Cristi</a>
-                        <a href="vallesa_mandor.html" class="dropdown-item">Vallesa de Mandor</a>
-                        <a href="palau_de_les_arts.html" class="dropdown-item">Palau de les Arts</a>
-                        <a href="palacio_de_congresos.html" class="dropdown-item">Palacio de Congresos</a>
-                        <a href="hotel_las_arenas.html" class="dropdown-item">Hotel Las Arenas</a>
-                    </div>
-                </div>
+                <a href="espacios.html" class="nav-item nav-link">Espacios</a>
                 <a href="quienes_somos.html" class="nav-item nav-link">¿Quienes somos?</a>
                 <a href="eventos.html" class="nav-item nav-link">Eventos</a>
                 <a href="contacto.html" class="nav-item nav-link">Contacto</a>
@@ -94,89 +85,34 @@
     </nav>
     <!-- Navbar End -->
 
-
-    <!-- Hero Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-        <div class="container py-5">
-            <div class="row justify-content-start">
-                <div class="col-lg-8 text-center text-lg-start">
-                    <h1 class="font-secondary text-primary mb-4">Super Crispy</h1>
-                    <h1 class="display-1 text-uppercase text-white mb-4">CakeZone</h1>
-                    <h1 class="text-uppercase text-white">The Best Cake In London</h1>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="" class="btn btn-primary border-inner py-3 px-5 me-5">Read More</a>
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                            <span></span>
-                        </button>
-                        <h5 class="font-weight-normal text-white m-0 ms-4 d-none d-sm-block">Play Video</h5>
-                    </div>
-                </div>
-            </div>
+    <!-- Carrusel Start -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-    </div>
-    <!-- Hero End -->
-
-
-    <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                            allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active h">
+            <img src="/img/img_espacios/cartua_de_ara_cristi/PHOTO-2018-09-06-14-56-04.jpg" class="d-block w-100 h-2 alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/img_espacios/cartua_de_ara_cristi/CARTUJA.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/img_espacios/cartua_de_ara_cristi/1_579.jpg" class="d-block w-100" alt="...">
+          </div>
         </div>
-    </div>
-    <!-- Video Modal End -->
-
-
-    <!-- About Start -->
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
-                <h2 class="text-primary font-secondary">About Us</h2>
-                <h1 class="display-4 text-uppercase">Welcome To CakeZone</h1>
-            </div>
-            <div class="row gx-5">
-                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/about.jpg" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-6 pb-5">
-                    <h4 class="mb-4">Tempor erat elitr rebum clita. Diam dolor diam ipsum erat lorem sed stet labore lorem sit clita duo</h4>
-                    <p class="mb-5">Tempor erat elitr at rebum at at clita. Diam dolor diam ipsum et tempor sit. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet magna</p>
-                    <div class="row g-5">
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center justify-content-center bg-primary border-inner mb-4" style="width: 90px; height: 90px;">
-                                <i class="fa fa-heartbeat fa-2x text-white"></i>
-                            </div>
-                            <h4 class="text-uppercase">100% Healthy</h4>
-                            <p class="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita nonumy dolor magna dolor vero</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center justify-content-center bg-primary border-inner mb-4" style="width: 90px; height: 90px;">
-                                <i class="fa fa-award fa-2x text-white"></i>
-                            </div>
-                            <h4 class="text-uppercase">Award Winning</h4>
-                            <p class="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita nonumy dolor magna dolor vero</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!-- Carrusel End -->
 
     <!-- Facts Start -->
     <div class="container-fluid bg-img py-5 mb-5">
