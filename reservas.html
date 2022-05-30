@@ -100,7 +100,7 @@
 
     <!-- Formulario de reserva Start-->
     <div id="formulario-reserva" class="mb-10">
-        <form id="enviar-mail">
+        <form id="form-reserva">
             <div class="mb-10">
                 <label for="nombreApellidos">Nombre y apellidos:</label>
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="nombreApellidos" type="text">
@@ -115,41 +115,78 @@
             </div>
             <div class="mb-10 from-check">
                 <label for="apertivos"><br>Apertivos</label><br>
+
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label><br>
+                <label for="apertivo1">Apertivo 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label><br>
+                <label for="apertivo1">Apertivo 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label><br>
+                <label for="apertivo1">Apertivo 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+                
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label><br>
+                <label for="apertivo1">Apertivo 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
                 
             </div>
             <div class="mb-10 from-check">
                 <label for="primerosPlatos"><br>Primeros platos</label><br>
+
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label><br>
+                <label for="primerosPlatos">1º plato 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label><br>
+                <label for="primerosPlatos">1º plato 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label><br><input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label><br>
+                <label for="primerosPlatos">1º plato 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+                <label for="primerosPlatos">1º plato 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
                 
             </div>
+            
             <div class="mb-10 from-check">
                 <label for="postres"><br>Postres</label><br>
+
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label><br>
+                <label for="postres">Postre 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label><br>
+                <label for="postres">Postre 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label><br>
+                <label for="postres">Postre 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label><br>
+                <label for="postres">Postre 1</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
             </div>
 
+            <div>
+                <label for="espacios"><br>Espacios<br></label>
 
-            <div class="flex justify-between">
+                <select name="espacios" id="espacios" form="espacios-form">
+                    <option value="cartua_de_ara_cristi">Cartuja de Ara Cristi</option>
+                    <option value="vallesa_mandor">Vallesa de Mandor</option>
+                    <option value="palau_de_les_arts">Palau de les Arts</option>
+                    <option value="palacio_de_congresos">Palacio de Congresos</option>
+                    <option value="hotel_las_arenas">Hotel Las Arenas</option>
+                </select>
+            </div>
+
+            <div class="flex justify-between"><br>
                 <button id="enviar"
                     class="w-full bg-blue-600 px-2 py-2 text-white items-center mr-5 uppercase font-bold items-center flex justify-center"
                     type="submit">Enviar
@@ -361,6 +398,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/reservas.js"></script>
 </body>
 
 </html>
