@@ -325,3 +325,16 @@ h6,
     background: linear-gradient(rgba(43, 40, 37, .5), rgba(43, 40, 37, .5)), url(../img/bg.jpg) center center no-repeat;
     background-size: cover;
 }
+
+#formulario-reserva {
+    background-color: darkgray;
+    padding: 40px;
+    margin: auto;
+    border: #24d800;
+
+}
+
+#form-reserva {
+    text-align: left;
+    align-self: start;
+}
