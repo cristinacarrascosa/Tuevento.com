@@ -100,105 +100,178 @@
 
     <!-- Formulario de reserva Start-->
     <div id="formulario-reserva" class="mb-10">
-        <form id="form-reserva">
-            <div class="mb-10">
-                <label for="nombreApellidos">Nombre y apellidos:</label>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="nombreApellidos" type="text">
-            </div>
-            <div class="mb-10">
-                <label for="email">Email:</label>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="email" type="email">
-            </div>
-            <div class="mb-10">
-                <label for="movil">Movil:</label>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="movil" type="text">
-            </div>
-            <div class="mb-10 from-check">
-                <label for="apertivos"><br>Apertivos</label><br>
 
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
+        <h2>Formulario de reserva</h2><br>
 
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
+        <!--Formulario de DATOS PERSONALES-->
+        <form id="form-datos-personales">
 
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
-                
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
-                
-            </div>
-            <div class="mb-10 from-check">
-                <label for="primerosPlatos"><br>Primeros platos</label><br>
+            <h4>Datos personales</h4>
 
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
+            <label for="nombreApellidos">Nombre y apellidos:</label>
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="nombreApellidos" type="text">
+            <br>
+            <label for="email">Email:</label>
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="email" type="email">
+            <br>
+            <label for="movil">Movil:</label>
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="movil" type="text">
+            <br>
 
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
+        </form>
 
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
+        <!--Formulario de ESPACIO-->
+        <from id="from-espacio">
 
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
-                
-            </div>
-            
-            <div class="mb-10 from-check">
-                <label for="postres"><br>Postres</label><br>
+            <br>
+            <h4>Espacios</h4>
 
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
+            <label for="espacios"><br>Espacios<br></label>
+            <select name="espacios" id="espacios" form="espacios-form">
+                <option value="cartua_de_ara_cristi">Cartuja de Ara Cristi</option>
+                <option value="vallesa_mandor">Vallesa de Mandor</option>
+                <option value="palau_de_les_arts">Palau de les Arts</option>
+                <option value="palacio_de_congresos">Palacio de Congresos</option>
+                <option value="hotel_las_arenas">Hotel Las Arenas</option>
+            </select>
 
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
+            <br>
+            <label for="fecha">Fecha</label>
+            <input type="date" name="fecha-reserva" id="fecha-reserva">
+            <label for="hora">Hora</label>
+            <input type="time" name="hora-reserva" id="hora-reserva">
+        </from>
 
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
+        <!--Formulario de GASTRONOMIA-->
+        <form id="form-gastronomia">
+            <br>
+            <h4>Gastronomía</h4>
 
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label>
-                <input class="" id="numPlatos" type="number" min="0"><br>
-            </div>
 
-            <div>
-                <label for="espacios"><br>Espacios<br></label>
+            <!--START APERTIVOS-->
+            <br>
+            <h5>Apertivos</h5>
 
-                <select name="espacios" id="espacios" form="espacios-form">
-                    <option value="cartua_de_ara_cristi">Cartuja de Ara Cristi</option>
-                    <option value="vallesa_mandor">Vallesa de Mandor</option>
-                    <option value="palau_de_les_arts">Palau de les Arts</option>
-                    <option value="palacio_de_congresos">Palacio de Congresos</option>
-                    <option value="hotel_las_arenas">Hotel Las Arenas</option>
-                </select>
-            </div>
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+            <label for="apertivo1">Ajoarriero con bacalao ahumado pan de centeno y vinagreta de nueces</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
 
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+            <label for="apertivo1">Dulce de manzana verde ricotta y crujiente de quicos</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+            <label for="apertivo1">Tosta danesa de semilla calabaza con brandada de bacalao</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+            <label for="apertivo1">Brocheta de ternera espárrago y cherry</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+            <label for="apertivo1">Bombón de foie con tosta de plume cake</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+            <label for="apertivo1">Crujente de sobrasada con pescado azul</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+            <!--END APERTIVOS-->
+
+            <!--START 1º PLATOS-->
+            <br>
+            <h5>1º Platos</h5>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+            <label for="primerosPlatos">Galta de ibérico confitada con parmetier de patata al curry rojo</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+            <label for="primerosPlatos">Magret de pato con salteado de piña y salteado de cous cous</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+            <label for="primerosPlatos">Cochinillo crujiente con puré de manzana a la canela</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+            <label for="primerosPlatos">Salmorejo de mango suave con foie, gelatina de amontillado y ensaladita</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+            <label for="primerosPlatos">Lubina salvaje con rissoto y jugo del asado</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+            <label for="primerosPlatos">Tartar de aguacate y langostinos</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+            <!--END 1º PLATOS-->
+
+            <!--START POSTRES-->
+            <br>
+            <h5>Postres</h5>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
+            <label for="postres">Gofre de manzana con helado</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
+            <label for="postres">Kit kat</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
+            <label for="postres">Terciopelo de frambuesa</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+            <!--END POSTRES-->
+
+            <!--START MENÚ CELIACO-->
+            <br>
+            <h5>Menú celiaco</h5>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="celiaco" type="checkbox">
+            <label for="celiaco">Lasagna fría de escalivada con pasta fresca</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="celiaco" type="checkbox">
+            <label for="celiaco">Pulpo a la parrilla con puré de piquillo</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="celiaco" type="checkbox">
+            <label for="celiaco">Ceviche de aguacate</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+            <!--END MENÚ CELIACO-->
+
+            <!--START MENÚ NIÑOS-->
+            <br>
+            <h5>Menú niños</h5>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="ninyos" type="checkbox">
+            <label for="ninyos">Mini Burguers variadas</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="ninyos" type="checkbox">
+            <label for="ninyos">Pincho de tortilla con aceituna</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+
+            <input class="bg-gray-100 border shadow pt-2 w-full" id="ninyos" type="checkbox">
+            <label for="ninyos">Arroces variados</label>
+            <input class="" id="numPlatos" type="number" min="0"><br>
+            <!--END MENÚ NIÑOS-->
+
+
+
+            <!--START BOTONES-->
             <div class="flex justify-between"><br>
                 <button id="enviar"
-                    class="w-full bg-blue-600 px-2 py-2 text-white items-center mr-5 uppercase font-bold items-center flex justify-center"
+                    class="w-full bg-dark px-2 py-2 text-white items-center mr-5 uppercase font-bold items-center flex justify-center"
                     type="submit">Enviar
-
                 </button>
 
                 <button id="resetBtn"
-                    class="w-full bg-green-600 px-2 py-2 text-white items-center uppercase font-bold items-center flex justify-center"
+                    class="w-full bg-dark px-2 py-2 text-white items-center uppercase font-bold items-center flex justify-center"
                     type="submit">Borrar formulario
-
                 </button>
             </div>
+            <!--END BOTONES-->
         </form>
     </div>
     <!-- Formulario de reserva End-->
