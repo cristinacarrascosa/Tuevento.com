@@ -325,3 +325,31 @@ h6,
     background: linear-gradient(rgba(43, 40, 37, .5), rgba(43, 40, 37, .5)), url(../img/bg.jpg) center center no-repeat;
     background-size: cover;
 }
+
+
+/*START RESERVAS*/
+
+#formulario-reserva {
+    background-color: darkgray;
+
+}
+
+#form-datos-personales, #form-espacio, #form-gastronomia {
+    padding: 25px 50px;
+    background-color: aqua;
+}
+
+#numPlatos {
+    
+}
+
+/* END RESERVAS */
+
+
+
+
+
+/* A partir de aquí modifica Cristina*/
+.card-img-top{
+    height: 200px;
+}

@@ -98,167 +98,226 @@
     </nav>
     <!-- Navbar End -->
 
-    <!-- Formulario de reserva Start-->
+    <!-- Formulario de reserva START-->
     <div id="formulario-reserva" class="mb-10">
-        <form id="enviar-mail">
-            <div class="mb-10">
+
+        <h2>Formulario de reserva</h2><br>
+
+        <!--START Formulario de DATOS PERSONALES-->
+        <div id="form-datos-personales">
+            <form>
+                <h4>Datos personales</h4>
+
                 <label for="nombreApellidos">Nombre y apellidos:</label>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="nombreApellidos" type="text">
-            </div>
-            <div class="mb-10">
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="nombreApellidos" type="text" size="30">
+                <br>
                 <label for="email">Email:</label>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="email" type="email">
-            </div>
-            <div class="mb-10">
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="email" type="email" size="40">
+                <br>
                 <label for="movil">Movil:</label>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="movil" type="text">
-            </div>
-            <div class="mb-10 from-check">
-                <label for="apertivos"><br>Apertivos</label><br>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label><br>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label><br>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label><br>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-                <label for="apertivo1">Apertivo 1</label><br>
-                
-            </div>
-            <div class="mb-10 from-check">
-                <label for="primerosPlatos"><br>Primeros platos</label><br>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label><br>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label><br>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label><br><input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
-                <label for="primerosPlatos">1º plato 1</label><br>
-                
-            </div>
-            <div class="mb-10 from-check">
-                <label for="postres"><br>Postres</label><br>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label><br>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label><br>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label><br>
-                <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
-                <label for="postres">Postre 1</label><br>
-            </div>
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="movili" type="text">
+                <br>
+            </form>
 
-
-            <div class="flex justify-between">
-                <button id="enviar"
-                    class="w-full bg-blue-600 px-2 py-2 text-white items-center mr-5 uppercase font-bold items-center flex justify-center"
-                    type="submit">Enviar
-
+            <!--START BOTONES en formulario de datos personales-->
+            <div id="botones" class="flex justify-between"><br>
+                <button id="next"
+                    class="w-full bg-dark px-2 py-2 text-white items-center mr-5 uppercase font-bold items-center flex justify-center"
+                    type="submit">Siguiente
                 </button>
 
-                <button id="resetBtn"
-                    class="w-full bg-green-600 px-2 py-2 text-white items-center uppercase font-bold items-center flex justify-center"
-                    type="submit">Borrar formulario
-
+                <button id="delete"
+                    class="w-full bg-dark px-2 py-2 text-white items-center uppercase font-bold items-center flex justify-center"
+                    type="submit">Borrar
                 </button>
             </div>
-        </form>
-    </div>
-    <!-- Formulario de reserva End-->
+            <!--END BOTONES en formulario de datos personales-->
 
-    <!-- Page Header Start -->
-    <div class="container-fluid bg-dark bg-img p-5 mb-5">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="display-4 text-uppercase text-white">Nuestro equipo</h1>
-                <h6></h6>
-                <a href="index.html">Home</a>
-                <i class="far fa-square text-primary px-2"></i>
-            </div>
         </div>
-    </div>
-    <!-- Page Header End -->
+        <!--END Formulario de DATOS PERSONALES-->
+
+        <!--START Formulario de ESPACIO-->
+        <div id="form-espacio">
+            <from>
+
+                <br>
+                <h4>Espacios</h4>
+
+                <label for="espacios"><br>Espacios<br></label>
+                <select name="espacios" id="espacios" form="espacios-form">
+                    <option value="cartua_de_ara_cristi">Cartuja de Ara Cristi</option>
+                    <option value="vallesa_mandor">Vallesa de Mandor</option>
+                    <option value="palau_de_les_arts">Palau de les Arts</option>
+                    <option value="palacio_de_congresos">Palacio de Congresos</option>
+                    <option value="hotel_las_arenas">Hotel Las Arenas</option>
+                </select>
+
+                <br>
+                <label for="fecha">Fecha</label>
+                <input type="date" name="fecha-reserva" id="fecha-reserva">
+                <label for="hora">Hora</label>
+                <input type="time" name="hora-reserva" id="hora-reserva">
+            </from>
+
+            <!--START BOTONES en formulario de espacios-->
+            <div id="botones" class="flex justify-between"><br>
+                <button id="next"
+                    class="w-full bg-dark px-2 py-2 text-white items-center mr-5 uppercase font-bold items-center flex justify-center"
+                    type="submit">Siguiente
+                </button>
+
+                <button id="delete"
+                    class="w-full bg-dark px-2 py-2 text-white items-center uppercase font-bold items-center flex justify-center"
+                    type="submit">Borrar
+                </button>
+            </div>
+            <!--END BOTONES en formulario de espacios-->
 
 
-    <!-- Team Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
-                <h2 class="text-primary font-secondary">Miembros del Equipo</h2>
-                <h1 class="display-4 text-uppercase">Nuestros Ingenieros</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/equipo/raimon.jpg" alt="">
-                            <div
-                                class="team-overlay w-100 h-100 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1"
-                                        href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1"
-                                        href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1"
-                                        href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-dark border-inner text-center p-4">
-                            <h4 class="text-uppercase text-primary">Raimon Vilar Morera</h4>
-                            <p class="text-white m-0">Diseño & Interfaz Web</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/equipo/ian.jpg" alt="">
-                            <div
-                                class="team-overlay w-100 h-100 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1"
-                                        href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1"
-                                        href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1"
-                                        href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-dark border-inner text-center p-4">
-                            <h4 class="text-uppercase text-primary">Ian Molina</h4>
-                            <p class="text-white m-0">Programación JavaScript</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/equipo/cristina.png" alt="">
-                            <div
-                                class="team-overlay w-100 h-100 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1"
-                                        href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1"
-                                        href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1"
-                                        href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-dark border-inner text-center p-4">
-                            <h4 class="text-uppercase text-primary">Cristina Carrascosa</h4>
-                            <p class="text-white m-0">Base de Datos</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
-    </div>
-    <!-- Team End -->
+        <!--END Formulario de ESPACIO-->
 
+        <!--START Formulario de GASTRONOMIA-->
+        <div id="form-gastronomia">
+            <form>
+                <br>
+                <h4>Gastronomía</h4>
+
+
+                <!--START APERTIVOS-->
+                <br>
+                <h5>Apertivos</h5>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+                <label for="apertivo1">Ajoarriero con bacalao ahumado pan de centeno y vinagreta de nueces</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+                <label for="apertivo1">Dulce de manzana verde ricotta y crujiente de quicos</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+                <label for="apertivo1">Tosta danesa de semilla calabaza con brandada de bacalao</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+                <label for="apertivo1">Brocheta de ternera espárrago y cherry</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+                <label for="apertivo1">Bombón de foie con tosta de plume cake</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
+                <label for="apertivo1">Crujente de sobrasada con pescado azul</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+                <!--END APERTIVOS-->
+
+                <!--START 1º PLATOS-->
+                <br>
+                <h5>1º Platos</h5>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+                <label for="primerosPlatos">Galta de ibérico confitada con parmetier de patata al curry rojo</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+                <label for="primerosPlatos">Magret de pato con salteado de piña y salteado de cous</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+                <label for="primerosPlatos">Cochinillo crujiente con puré de manzana a la canela</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+                <label for="primerosPlatos">Salmorejo de mango suave con foie, gelatina de amontillado y
+                    ensaladita</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+                <label for="primerosPlatos">Lubina salvaje con rissoto y jugo del asado</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="primerosPlatos" type="checkbox">
+                <label for="primerosPlatos">Tartar de aguacate y langostinos</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+                <!--END 1º PLATOS-->
+
+                <!--START POSTRES-->
+                <br>
+                <h5>Postres</h5>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
+                <label for="postres">Gofre de manzana con helado</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
+                <label for="postres">Kit kat</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="postres" type="checkbox">
+                <label for="postres">Terciopelo de frambuesa</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+                <!--END POSTRES-->
+
+                <!--START MENÚ CELIACO-->
+                <br>
+                <h5>Menú celiaco</h5>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="celiaco" type="checkbox">
+                <label for="celiaco">Lasagna fría de escalivada con pasta fresca</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="celiaco" type="checkbox">
+                <label for="celiaco">Pulpo a la parrilla con puré de piquillo</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="celiaco" type="checkbox">
+                <label for="celiaco">Ceviche de aguacate</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+                <!--END MENÚ CELIACO-->
+
+                <!--START MENÚ NIÑOS-->
+                <br>
+                <h5>Menú niños</h5>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="ninyos" type="checkbox">
+                <label for="ninyos">Mini Burguers variadas</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="ninyos" type="checkbox">
+                <label for="ninyos">Pincho de tortilla con aceituna</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+
+                <input class="bg-gray-100 border shadow pt-2 w-full" id="ninyos" type="checkbox">
+                <label for="ninyos">Arroces variados</label>
+                <input class="" id="numPlatos" type="number" min="0"><br>
+                <!--END MENÚ NIÑOS-->
+            </form>
+
+            <!--START BOTONES en formulario de gastronomía-->
+            <div id="botones" class="flex justify-between"><br>
+                <button id="reservar"
+                    class="w-full bg-dark px-2 py-2 text-white items-center mr-5 uppercase font-bold items-center flex justify-center"
+                    type="submit">Reservar
+                </button>
+
+                <button id="delete"
+                    class="w-full bg-dark px-2 py-2 text-white items-center uppercase font-bold items-center flex justify-center"
+                    type="submit">Borrar
+                </button>
+            </div>
+            <!--END BOTONES en formulario de datos gastronomía-->
+        </div>
+        <!--END Formulario de GASTRONOMIA-->
+
+
+
+
+
+    </div>
+    <!-- Formulario de reserva END-->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-img text-secondary" style="margin-top: 90px">
@@ -361,6 +420,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/reservas.js"></script>
 </body>
 
 </html>
