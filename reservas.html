@@ -106,7 +106,6 @@
         <!--START Formulario de DATOS PERSONALES-->
         <div id="form-datos-personales">
             <form>
-
                 <h4>Datos personales</h4>
 
                 <label for="nombreApellidos">Nombre y apellidos:</label>
@@ -118,14 +117,28 @@
                 <label for="movil">Movil:</label>
                 <input class="bg-gray-100 border shadow pt-2 w-full" id="movil" type="text">
                 <br>
-
             </form>
+
+            <!--START BOTONES en formulario de datos personales-->
+            <div id="botones" class="flex justify-between"><br>
+                <button id="next"
+                    class="w-full bg-dark px-2 py-2 text-white items-center mr-5 uppercase font-bold items-center flex justify-center"
+                    type="submit">Siguiente
+                </button>
+
+                <button id="delete"
+                    class="w-full bg-dark px-2 py-2 text-white items-center uppercase font-bold items-center flex justify-center"
+                    type="submit">Borrar
+                </button>
+            </div>
+            <!--END BOTONES en formulario de datos personales-->
+
         </div>
         <!--END Formulario de DATOS PERSONALES-->
 
         <!--START Formulario de ESPACIO-->
         <div id="form-espacio">
-            <from id="from-espacio">
+            <from>
 
                 <br>
                 <h4>Espacios</h4>
@@ -145,6 +158,23 @@
                 <label for="hora">Hora</label>
                 <input type="time" name="hora-reserva" id="hora-reserva">
             </from>
+
+            <!--START BOTONES en formulario de espacios-->
+            <div id="botones" class="flex justify-between"><br>
+                <button id="next"
+                    class="w-full bg-dark px-2 py-2 text-white items-center mr-5 uppercase font-bold items-center flex justify-center"
+                    type="submit">Siguiente
+                </button>
+
+                <button id="delete"
+                    class="w-full bg-dark px-2 py-2 text-white items-center uppercase font-bold items-center flex justify-center"
+                    type="submit">Borrar
+                </button>
+            </div>
+            <!--END BOTONES en formulario de espacios-->
+
+
+
         </div>
         <!--END Formulario de ESPACIO-->
 
@@ -265,24 +295,26 @@
                 <input class="" id="numPlatos" type="number" min="0"><br>
                 <!--END MENÚ NIÑOS-->
             </form>
+
+            <!--START BOTONES en formulario de gastronomía-->
+            <div id="botones" class="flex justify-between"><br>
+                <button id="reservar"
+                    class="w-full bg-dark px-2 py-2 text-white items-center mr-5 uppercase font-bold items-center flex justify-center"
+                    type="submit">Reservar
+                </button>
+
+                <button id="delete"
+                    class="w-full bg-dark px-2 py-2 text-white items-center uppercase font-bold items-center flex justify-center"
+                    type="submit">Borrar
+                </button>
+            </div>
+            <!--END BOTONES en formulario de datos gastronomía-->
         </div>
         <!--END Formulario de GASTRONOMIA-->
 
 
 
-        <!--START BOTONES-->
-        <div id="botones" class="flex justify-between"><br>
-            <button id="enviar"
-                class="w-full bg-dark px-2 py-2 text-white items-center mr-5 uppercase font-bold items-center flex justify-center"
-                type="submit">Enviar
-            </button>
 
-            <button id="resetBtn"
-                class="w-full bg-dark px-2 py-2 text-white items-center uppercase font-bold items-center flex justify-center"
-                type="submit">Borrar formulario
-            </button>
-        </div>
-        <!--END BOTONES-->
 
     </div>
     <!-- Formulario de reserva END-->
