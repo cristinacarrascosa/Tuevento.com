@@ -330,17 +330,20 @@ h6,
 /*START RESERVAS*/
 
 #formulario-reserva {
-    background-color: darkgray;
+    background-color: aqua;
+    text-align:start;
+    padding-left: 25px;
 
 }
 
 #form-datos-personales, #form-espacio, #form-gastronomia {
     padding: 25px 50px;
     background-color: aqua;
+    text-align:start;
 }
 
 #numPlatos {
-    
+    width: 50px;
 }
 
 /* END RESERVAS */
