@@ -326,21 +326,24 @@ h6,
     background-size: cover;
 }
 
+
+/*START RESERVAS*/
+
 #formulario-reserva {
     background-color: darkgray;
-    padding: 40px;
-    margin: auto;
-    border: #24d800;
 
 }
 
-#form-reserva {
-    text-align: left;
-    align-self: start;
+#form-datos-personales, #form-espacio, #form-gastronomia {
+    padding: 25px 50px;
+    background-color: aqua;
 }
 
+#numPlatos {
+    
+}
 
-
+/* END RESERVAS */
 
 
 
