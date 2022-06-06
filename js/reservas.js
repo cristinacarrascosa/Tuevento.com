@@ -18,6 +18,8 @@ const formGastronomia = document.getElementById('form-gastronomia');
 const nombreApellidos = document.querySelector('#nombreApellidos');
 const email = document.querySelector('#email');
 const movil = document.querySelector('#movil');
+const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 
 eventListeners();
 
@@ -40,11 +42,32 @@ function iniciarApp() {
 
 
 function validarFormDatosPers() {
+
+    if (nombreApellidos.value.length > 0) {
+        console.log('OK nombre');
+    } else {
+        console.log('ERROR nombre');
+    }
+
+    if (movil.value.length > 0 && movil.value.length < 10) {
+        console.log('OK movil');
+    } else {
+        console.log('ERROR movil');
+    }
+
     formEspacio.style.display = '';
     btnDatosPers.style.display = 'none';
+
+
+
+    
 }
 
 function validarFormEspacios() {
     formGastronomia.style.display = '';
     btnEspacios.style.display = 'none';
+}
+
+function validarFormGastronomia() {
+
 }
