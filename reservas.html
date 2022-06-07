@@ -109,13 +109,13 @@
             <h4>Datos personales</h4>
 
             <label for="nombreApellidos">Nombre y apellidos:</label>
-            <input class="bg-gray-100 border-black shadow pt-2 w-full" id="nombreApellidos" type="text" size="30">
+            <input class="" id="nombreApellidos" type="text" size="30">
             <br>
             <label for="email">Email:</label>
-            <input class="bg-gray-100 border-black shadow pt-2 w-full" id="email" type="email" size="40">
+            <input class="" id="email" type="email" size="40">
             <br>
             <label for="movil">Movil:</label>
-            <input class="bg-gray-100 border-black shadow pt-2 w-full" id="movil" type="text">
+            <input class="" id="movil" type="text">
             <br>
         </form>
 
@@ -144,12 +144,13 @@
             <h4>Espacios</h4>
 
             <label for="espacios"><br>Espacios<br></label>
-            <select name="espacios" id="espacios" form="espacios-form">
-                <option value="cartua_de_ara_cristi">Cartuja de Ara Cristi</option>
-                <option value="vallesa_mandor">Vallesa de Mandor</option>
-                <option value="palau_de_les_arts">Palau de les Arts</option>
-                <option value="palacio_de_congresos">Palacio de Congresos</option>
-                <option value="hotel_las_arenas">Hotel Las Arenas</option>
+            <select name="espacios" id="espacio" form="espacios-form">
+                <option value="selecciona" selected>Selecciona un espacio</option>
+                <option value="Cartuja de Ara Cristi">Cartuja de Ara Cristi</option>
+                <option value="Vallesa de Mandor">Vallesa de Mandor</option>
+                <option value="Palau de les Arts">Palau de les Arts</option>
+                <option value="Palacio de Congresos">Palacio de Congresos</option>
+                <option value="Hotel Las Arenas">Hotel Las Arenas</option>
             </select>
 
             <br>
@@ -191,7 +192,8 @@
 
             <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
             <label for="apertivo1">BALACAO AJORRIERO</label>
-            <input class="" id="numPlatos" type="number" min="0"><br>
+            <input class="" id="numPlatos" type="number" min="0">
+            <label for="unidad">Cantidad</label><br>
 
             <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
             <label for="apertivo1">DULCE DE MANZANA</label>
@@ -214,7 +216,7 @@
             <input class="" id="numPlatos" type="number" min="0"><br>
 
             <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
-            <label for="apertivo1">COUOELLE DE TOMATE</label>
+            <label for="apertivo1">COUPELLE DE TOMATE</label>
             <input class="" id="numPlatos" type="number" min="0"><br>
 
             <input class="bg-gray-100 border shadow pt-2 w-full" id="apertivo1" type="checkbox">
@@ -327,9 +329,6 @@
         </div>
     </div>
     <!--Resumen de reserva END-->
-
-
-
 
     </div>
     <!-- Formulario de reserva END-->

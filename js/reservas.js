@@ -5,7 +5,9 @@
 const btnNext1 = document.getElementById('btnNext1');
 const btnNext2 = document.getElementById('btnNext2');
 const btnToBook = document.getElementById('btnToBook');
-const btnDelete = document.getElementById('btnDelete');
+const btnDelete1 = document.getElementById('btnDelete1');
+const btnDelete2 = document.getElementById('btnDelete2');
+const btnDelete3 = document.getElementById('btnDelete3');
 const btnDatosPers = document.getElementById('btnDatosPers');
 const btnEspacios = document.getElementById('btnEspacios');
 
@@ -19,7 +21,9 @@ const nombreApellidos = document.querySelector('#nombreApellidos');
 const email = document.querySelector('#email');
 const movil = document.querySelector('#movil');
 const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+const espacio = document.querySelector('#espacio');
+const fecha = document.querySelector('#fecha-reserva');
+const hora = document.querySelector('#hora-reserva');
 
 eventListeners();
 
@@ -31,7 +35,10 @@ function eventListeners() {
     // Botón de 'Siguiente'
     btnNext1.addEventListener('click', validarFormDatosPers);
     btnNext2.addEventListener('click', validarFormEspacios);
-    
+
+    // Botón de 'Borrar'
+    //btnDelete.addEventListener('click', reset);
+
 }
 
 function iniciarApp() {
@@ -40,34 +47,56 @@ function iniciarApp() {
     formGastronomia.style.display = 'none';
 }
 
-
+// Función que comprueba los datos personales son correctos
 function validarFormDatosPers() {
-
-    if (nombreApellidos.value.length > 0) {
-        console.log('OK nombre');
+    if (!validarNomApe(nombreApellidos.value)) {
+        alert('ERROR: Nombre y apellidos');
+    } else if (!validarEmail(email.value)) {
+        alert('ERROR: Email no es correcto.');
+    } else if (!validarNumTlf(movil.value)) {
+        alert('ERROR: El número de móvil no es correcto.')
     } else {
-        console.log('ERROR nombre');
-    }
-
-    if (movil.value.length > 0 && movil.value.length < 10) {
-        console.log('OK movil');
-    } else {
-        console.log('ERROR movil');
-    }
-
-    formEspacio.style.display = '';
-    btnDatosPers.style.display = 'none';
-
-
-
-    
+        formEspacio.style.display = '';
+        btnDatosPers.style.display = 'none';
+    }     
 }
 
 function validarFormEspacios() {
-    formGastronomia.style.display = '';
-    btnEspacios.style.display = 'none';
+    if (espacio.value === 'selecciona') {
+        alert('ERROR: Selecciona un espacio.');
+    } else if (fecha.value === '') {
+        alert('ERROR: Elige una fecha.')
+    } else if (hora.value === '') {
+        alert('ERROR: Elige una hora.')
+    } else {
+        formGastronomia.style.display = '';
+        btnEspacios.style.display = 'none';
+    }
+
+
 }
 
-function validarFormGastronomia() {
+function deleteForm(e) {
+    //e.preventDefault();
+}
 
+// Comprueba que el num. de movil empieza por 6, 7 o 9 y tiene 9 numeros.
+function validarNumTlf(numTlf) {
+    var str = numTlf.toString().replace(/\s/g, '');
+    return str.length === 9 && /^[679]{1}[0-9]{8}$/.test(str);
+}
+
+// Comprueba que nombre y apellidos tienen mas de 3 letras.
+function validarNomApe(nomApe) {
+    return nomApe.length > 3;
+}
+
+// Comprueba que email es valido
+function validarEmail(correo) {
+    return er.test(correo);
+}
+
+// Comprueba la fecha es despues del dia hoy
+function testDate(date) {
+    
 }
