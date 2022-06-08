@@ -336,7 +336,7 @@ h6,
 
 }
 
-#form-datos-personales, #form-espacio, #form-gastronomia {
+#div-datos-personales, #div-espacio, #div-gastronomia {
     padding: 25px 50px;
     background-color: aqua;
     text-align:start;

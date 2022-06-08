@@ -21,7 +21,7 @@ const nombreApellidos = document.querySelector('#nombreApellidos');
 const email = document.querySelector('#email');
 const movil = document.querySelector('#movil');
 const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const espacio = document.querySelector('#espacio');
+const espacio = document.querySelector('#lista-espacio');
 const fecha = document.querySelector('#fecha-reserva');
 const hora = document.querySelector('#hora-reserva');
 
@@ -39,6 +39,7 @@ function eventListeners() {
     // Botones de 'Borrar'
     btnDelete1.addEventListener('click', resetFormDatosPers);
     btnDelete2.addEventListener('click', resetFormEspacio);
+    btnDelete3.addEventListener('click', resetFormGastronomia);
 
 }
 
@@ -48,7 +49,7 @@ function iniciarApp() {
     formGastronomia.style.display = 'none';
 }
 
-// Función que comprueba los datos personales son correctos
+// FUNCIÓN: Validación formulario de Datos Personales
 function validarFormDatosPers() {
     if (!validarNomApe(nombreApellidos.value)) {
         alert('ERROR: Nombre y apellidos');
@@ -59,9 +60,10 @@ function validarFormDatosPers() {
     } else {
         formEspacio.style.display = '';
         btnDatosPers.style.display = 'none';
-    }     
+    }
 }
 
+// FUNCIÓN: Validación formulario de Espacio
 function validarFormEspacios() {
     if (espacio.value === 'selecciona') {
         alert('ERROR: Selecciona un espacio.');
@@ -74,12 +76,10 @@ function validarFormEspacios() {
         btnEspacios.style.display = 'none';
     }
 
+    validarFormDatosPers();
 
 }
 
-function deleteForm(e) {
-    //e.preventDefault();
-}
 
 // Comprueba que el num. de movil empieza por 6, 7 o 9 y tiene 9 numeros.
 function validarNumTlf(numTlf) {
@@ -98,9 +98,11 @@ function validarEmail(correo) {
 }
 
 // Comprueba la fecha es despues del dia hoy
-function testDate(date) {
+/* function testDate(date) {
     
-}
+} */
+
+
 
 // Reset formulario de datos personales.
 function resetFormDatosPers() {
@@ -110,4 +112,9 @@ function resetFormDatosPers() {
 // Reset formulario de espacio.
 function resetFormEspacio() {
     document.querySelector("#form-espacio").reset();
+}
+
+// Reset formulario de gastronomía
+function resetFormGastronomia() {
+    document.querySelector("#form-gastronomia").reset();
 }
