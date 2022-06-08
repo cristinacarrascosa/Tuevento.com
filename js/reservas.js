@@ -12,9 +12,9 @@ const btnDatosPers = document.getElementById('btnDatosPers');
 const btnEspacios = document.getElementById('btnEspacios');
 
 //div
-const formDatosPers = document.getElementById('form-datos-personales');
-const formEspacio = document.getElementById('form-espacio');
-const formGastronomia = document.getElementById('form-gastronomia');
+const formDatosPers = document.getElementById('div-datos-personales');
+const formEspacio = document.getElementById('div-espacio');
+const formGastronomia = document.getElementById('div-gastronomia');
 
 // VARIABLES PARA CAMPOS
 const nombreApellidos = document.querySelector('#nombreApellidos');
@@ -36,8 +36,9 @@ function eventListeners() {
     btnNext1.addEventListener('click', validarFormDatosPers);
     btnNext2.addEventListener('click', validarFormEspacios);
 
-    // Botón de 'Borrar'
-    //btnDelete.addEventListener('click', reset);
+    // Botones de 'Borrar'
+    btnDelete1.addEventListener('click', resetFormDatosPers);
+    btnDelete2.addEventListener('click', resetFormEspacio);
 
 }
 
@@ -99,4 +100,14 @@ function validarEmail(correo) {
 // Comprueba la fecha es despues del dia hoy
 function testDate(date) {
     
+}
+
+// Reset formulario de datos personales.
+function resetFormDatosPers() {
+    document.querySelector("#form-datos-personales").reset();
+}
+
+// Reset formulario de espacio.
+function resetFormEspacio() {
+    document.querySelector("#form-espacio").reset();
 }
