@@ -11,6 +11,7 @@ const btnDelete3 = document.getElementById('btnDelete3');
 const btnDatosPers = document.getElementById('btnDatosPers');
 const btnEspacios = document.getElementById('btnEspacios');
 
+
 //div
 const formDatosPers = document.getElementById('div-datos-personales');
 const formEspacio = document.getElementById('div-espacio');
@@ -25,6 +26,7 @@ const espacio = document.querySelector('#lista-espacio');
 const fecha = document.querySelector('#fecha-reserva');
 const hora = document.querySelector('#hora-reserva');
 
+
 eventListeners();
 
 // FUNCIONES
@@ -35,12 +37,14 @@ function eventListeners() {
     // Botón de 'Siguiente'
     btnNext1.addEventListener('click', validarFormDatosPers);
     btnNext2.addEventListener('click', validarFormEspacios);
+    btnToBook.addEventListener('click', validarFormGastronomia);
 
     // Botones de 'Borrar'
     btnDelete1.addEventListener('click', resetFormDatosPers);
     btnDelete2.addEventListener('click', resetFormEspacio);
     btnDelete3.addEventListener('click', resetFormGastronomia);
 
+    
 }
 
 function iniciarApp() {
@@ -77,7 +81,27 @@ function validarFormEspacios() {
     }
 
     validarFormDatosPers();
+}
 
+// FUNCIÓN: Validación formulario de Gastronomía ()
+function validarFormGastronomia() {
+    
+    var isCheckboxApertivos = document.getElementById('checkboxApertivos').checked;
+    console.log('APERTIVOS ' + isCheckboxApertivos);
+
+    var isCheckbox1platos = document.getElementById('checkbox1platos').checked;
+    console.log('1 platos ' + isCheckbox1platos);
+
+    var isCheckboxPostres = document.getElementById('checkboxPostres').checked;
+    console.log('Postres ' + isCheckboxPostres);
+
+    var isCheckboxCeliaco = document.getElementById('checkboxCeliaco').checked;
+    console.log('Celiaco ' + isCheckboxCeliaco);
+
+    var isCheckboxNinyos = document.getElementById('checkboxNinyos').checked;
+    console.log('Niños ' + isCheckboxNinyos);
+
+    validarFormEspacios();
 }
 
 
