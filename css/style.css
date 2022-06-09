@@ -359,6 +359,9 @@ h6,
 
 
 /* A partir de aquí modifica Cristina*/
-.card-img-top{
-    height: 200px;
-}
+
+
+/* para que se oculten los botones*/
+/* .btn-group-vertical{
+    visibility: hidden;
+} */
