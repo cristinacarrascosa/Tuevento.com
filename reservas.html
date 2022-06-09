@@ -79,16 +79,7 @@
             <div class="navbar-nav ms-auto mx-lg-auto py-0">
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="gastronomia.html" class="nav-item nav-link">Gastronomia</a>
-                <div class="nav-item dropdwon">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Espacios</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="cartuja_ara_cristi.html" class="dropdown-item">Cartuja de Ara Cristi</a>
-                        <a href="vallesa_mandor.html" class="dropdown-item">Vallesa de Mandor</a>
-                        <a href="palau_de_les_arts.html" class="dropdown-item">Palau de les Arts</a>
-                        <a href="palacio_de_congresos.html" class="dropdown-item">Palacio de Congresos</a>
-                        <a href="hotel_las_arenas.html" class="dropdown-item">Hotel Las Arenas</a>
-                    </div>
-                </div>
+                <a href="espacios.html" class="nav-item nav-link">Espacios</a>
                 <a href="reservas.html" class="nav-item nav-link">Reservas</a>
                 <a href="quienes_somos.html" class="nav-item nav-link">¿Quienes somos?</a>
                 <a href="eventos.html" class="nav-item nav-link">Eventos</a>
@@ -107,7 +98,7 @@
         <div id="div-datos-personales">
             <form id="form-datos-personales">
                 <h4>Datos personales</h4>
-
+                <br>
                 <label for="nombreApellidos">Nombre y apellidos:</label>
                 <input class="" id="nombreApellidos" type="text" size="30">
                 <br>
@@ -139,8 +130,6 @@
         <!--START Formulario de ESPACIO-->
         <div id="div-espacio">
             <form id="form-espacio">
-
-                <br>
                 <h4>Espacios</h4>
                 <label for="espacios"><br>Espacios<br></label>
                 <select name="espacios" id="lista-espacio" form="espacio-form">
@@ -186,145 +175,157 @@
         <!--START Formulario de GASTRONOMIA-->
         <div id="div-gastronomia">
             <form id="form-gastronomia">
-                <br>
+                
                 <h4>Gastronomía</h4>
 
-
                 <!--START APERTIVOS-->
-                <br>
-
                 <div id="checkboxApertivos">
+                    <br>
                     <h5>Apertivos</h5>
-
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxApertivos1" type="checkbox">
                     <label for="apertivo1">BALACAO AJORRIERO</label>
                     <input class="" id="numPlatos" type="number" min="0">
-                    <label for="unidad">Cantidad</label><br>
-
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxApertivos2" type="checkbox">
                     <label for="apertivo1">DULCE DE MANZANA</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxApertivos3" type="checkbox">
                     <label for="apertivo1">TOSTA DANESA</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxApertivos4" type="checkbox">
                     <label for="apertivo1">BOMBON DE FOIE</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxApertivos5" type="checkbox">
                     <label for="apertivo1">BROCHETA DE TERNERA</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxApertivos6" type="checkbox">
                     <label for="apertivo1">CRUJIENTE DE SOBRADA</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxApertivos7" type="checkbox">
                     <label for="apertivo1">COUPELLE DE TOMATE</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxApertivos8" type="checkbox">
                     <label for="apertivo1">BUFFETE DE QUESOS</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                 </div>
-
-
                 <!--END APERTIVOS-->
 
                 <!--START 1º PLATOS-->
-                <br>
                 <div id="checkbox1platos">
+                    <br>
                     <h5>1º Platos</h5>
-
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkbox1platos" type="checkbox">
                     <label for="primerosPlatos">Galta de ibérico confitada con parmetier de patata al curry rojo</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkbox1platos" type="checkbox">
                     <label for="primerosPlatos">Magret de pato con salteado de piña y salteado de cous</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkbox1platos" type="checkbox">
                     <label for="primerosPlatos">Cochinillo crujiente con puré de manzana a la canela</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkbox1platos" type="checkbox">
-                    <label for="primerosPlatos">Salmorejo de mango suave con foie, gelatina de amontillado y
-                        ensaladita</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <label for="primerosPlatos">Salmorejo de mango suave con foie, gelatina de amontillado y ensaladita</label>
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkbox1platos" type="checkbox">
                     <label for="primerosPlatos">Lubina salvaje con rissoto y jugo del asado</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkbox1platos" type="checkbox">
                     <label for="primerosPlatos">Tartar de aguacate y langostinos</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                 </div>
-
                 <!--END 1º PLATOS-->
 
                 <!--START POSTRES-->
-                <br>
                 <div id="checkboxPostres">
+                    <br>
                     <h5>Postres</h5>
-
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxPostres" type="checkbox">
                     <label for="postres">Gofre de manzana con helado</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxPostres" type="checkbox">
                     <label for="postres">Kit kat</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxPostres" type="checkbox">
                     <label for="postres">Terciopelo de frambuesa</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                 </div>
-
                 <!--END POSTRES-->
 
                 <!--START MENÚ CELIACO-->
-                <br>
-
                 <div id="checkboxCeliaco">
+                    <br>
                     <h5>Menú celiaco</h5>
-
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="bbcheckboxCeliaco" type="checkbox">
                     <label for="celiaco">Lasagna fría de escalivada con pasta fresca</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="bbcheckboxCeliaco" type="checkbox">
                     <label for="celiaco">Pulpo a la parrilla con puré de piquillo</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="bbcheckboxCeliaco" type="checkbox">
                     <label for="celiaco">Ceviche de aguacate</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                 </div>
-
                 <!--END MENÚ CELIACO-->
 
                 <!--START MENÚ NIÑOS-->
-                <br>
                 <div id="checkboxNinyos">
+                    <br>
                     <h5>Menú niños</h5>
-
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxNinyos" type="checkbox">
                     <label for="ninyos">Mini Burguers variadas</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxNinyos" type="checkbox">
                     <label for="ninyos">Pincho de tortilla con aceituna</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
-
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                     <input class="bg-gray-100 border shadow pt-2 w-full" id="checkboxNinyos" type="checkbox">
                     <label for="ninyos">Arroces variados</label>
-                    <input class="" id="numPlatos" type="number" min="0"><br>
+                    <input class="" id="numPlatos" type="number" min="0">
+                    <label for="unidad">cantidad</label>
+                    <br>
                 </div>
-
                 <!--END MENÚ NIÑOS-->
             </form>
 
