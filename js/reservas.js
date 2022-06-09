@@ -102,11 +102,9 @@ function validarFormEspacios() {
 
 // FUNCIÓN: Validación formulario de Gastronomía ()
 function validarFormGastronomia() {
-
-    if (validarApertivos == true && validar1Platos == true && validarPostres == true) {
-        console.log('OOOOOOOOOOOOOOOOOOOOOOOK');
-    } else {
-        console.log('ERROOOOOOOOOOOOOOR');
+    
+    if (validarApertivos() === true && validar1Platos() === true && validarPostres() === true) {
+        console.log('RESERVADO');
     }
 
 }
@@ -172,9 +170,9 @@ function resetFormGastronomia() {
 function validarApertivos() {
 
     let checked = checkBoxApertivos.querySelectorAll('input[type=checkbox]:checked');
-    console.log(checked);
+    //console.log(checked);
 
-    if (checked.length == 0) {
+    if (checked.length === 0) {
         alert("Hay que elegir un apertivo mínimo.");
         return false;
     } else {
@@ -187,9 +185,9 @@ function validarApertivos() {
 function validar1Platos() {
 
     let checked = checkBox1Platos.querySelectorAll('input[type=checkbox]:checked');
-    console.log(checked);
+    //console.log(checked);
 
-    if (checked.length == 0) {
+    if (checked.length === 0) {
         alert("Hay que elegir un plato mínimo.");
         return false;
     } else {
@@ -202,9 +200,9 @@ function validar1Platos() {
 function validarPostres() {
 
     let checked = checkBoxPostres.querySelectorAll('input[type=checkbox]:checked');
-    console.log(checked);
+    //console.log(checked);
 
-    if (checked.length == 0) {
+    if (checked.length === 0) {
         alert("Hay que elegir un postre mínimo.");
         return false;
     } else {
