@@ -1,3 +1,6 @@
+// IAN MOLINA
+
+
 //'use strict'
 
 // VARIABLES
@@ -35,6 +38,7 @@ const checkBox1Platos = document.querySelector('#checkbox1platos');
 const checkBoxPostres = document.querySelector('#checkboxPostres');
 const checkBoxCeliaco = document.querySelector('#checkboxCeliaco');
 const checkBoxNinyos = document.querySelector('#checkboxNinyos');
+
 
 eventListeners();
 
@@ -78,6 +82,7 @@ function validarFormDatosPers() {
         document.getElementById('nombreApellidos').disabled = true;
         document.getElementById('email').disabled = true;
         document.getElementById('movil').disabled = true;
+        recopilarDatosPers();
     }
 }
 
@@ -95,16 +100,16 @@ function validarFormEspacios() {
         document.getElementById('lista-espacio').disabled = true;
         document.getElementById('fecha-reserva').disabled = true;
         document.getElementById('hora-reserva').disabled = true;
+        recopilarEspacio();
     }
-
-    //validarFormDatosPers();
 }
 
 // FUNCIÓN: Validación formulario de Gastronomía ()
 function validarFormGastronomia() {
-    
+
     if (validarApertivos() === true && validar1Platos() === true && validarPostres() === true) {
         console.log('RESERVADO');
+        recopilarGastronomia();
     }
 
 }
@@ -211,3 +216,50 @@ function validarPostres() {
 
 }
 
+// FUNCIÓN: Recoge los datos personales y mostrarlos en 'Resumen tu reserva'
+function recopilarDatosPers() {
+    document.getElementById('resumen-nombreApellidos').innerHTML = nombreApellidos.value;
+    document.getElementById('resumen-email').innerHTML = email.value;
+    document.getElementById('resumen-movil').innerHTML = movil.value;
+}
+
+// FUNCIÓN: Recoge información del espacio y mostrarlos en 'Resumen tu reserva'
+function recopilarEspacio() {
+    document.getElementById('resumen-espacio').innerHTML = espacio.value;
+    document.getElementById('resumen-fecha').innerHTML = 'Fecha: ' + fecha.value;
+    document.getElementById('resumen-hora').innerHTML = 'Hora: ' + hora.value + ' h';
+}
+
+// FUNCIÓN: Recoge información del gastronomía y mostrarlo en 'Resumen tu reserva'
+function recopilarGastronomia() {
+
+    let checkedApertivos = checkBoxApertivos.querySelectorAll('input[type=checkbox]:checked');
+    let checked1Platos = checkBox1Platos.querySelectorAll('input[type=checkbox]:checked');
+    let checkedPostres = checkBoxPostres.querySelectorAll('input[type=checkbox]:checked');
+    let checkedNinyos = checkBoxNinyos.querySelectorAll('input[type=checkbox]:checked');
+    let checkedCeliaco = checkBoxCeliaco.querySelectorAll('input[type=checkbox]:checked');
+
+    for (let i = 0; i < checkedApertivos.length; i++) {
+        document.getElementById('resumenApertivo' + [i]).innerHTML = checkedApertivos[i].value;
+    }
+
+    for (let i = 0; i < checked1Platos.length; i++) {
+        document.getElementById('resumen1Platos' + [i]).innerHTML = checked1Platos[i].value;
+    }
+
+    for (let i = 0; i < checkedPostres.length; i++) {
+        document.getElementById('resumenPostres' + [i]).innerHTML = checkedPostres[i].value;
+    }
+
+    if (checkedNinyos.length > 0) {
+        for (let i = 0; i < checkedNinyos.length; i++) {
+            document.getElementById('resumenNinyos' + [i]).innerHTML = checkedNinyos[i].value;
+        }
+    }
+
+    if (checkedCeliaco.length > 0) {
+        for (let i = 0; i < checkedCeliaco.length; i++) {
+            document.getElementById('resumenCeliaco' + [i]).innerHTML = checkedCeliaco[i].value;
+        }
+    }
+}
