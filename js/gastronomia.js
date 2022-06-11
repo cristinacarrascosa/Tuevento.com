@@ -8,10 +8,10 @@ const imagenes = document.querySelectorAll('.imagen')
 const listaMenu = document.querySelector('.table tbody');
 const btnEliminar = document.querySelector('.btnEliminar');
 const btnModificar = document.querySelector('.btnModificar');
-const btnAgregar = document.querySelector('.btnAgregar');
+const btnComprar = document.querySelector('.btnComprar');
 const btnBorrarMenu = document.querySelector('#borrar-menu');
 let platosMenu = [];
-console.log(btnBorrarMenu);
+
 
 // Funcion para registrar todos los eventListeners
 cargarEventListeners();
@@ -47,9 +47,9 @@ function modificarPlato(e){
 }
 
 function agregarPlato(e){
-    if(e.target.classList.contains('btnAgregar') ){
+    if(e.target.classList.contains('btnComprar') ){
         const platoSeleccionado =e.target.parentElement.parentElement;
-        //console.log('pulsaste btnAgregar');
+        //console.log('pulsaste btnComprar');
         leerDatosPlato(platoSeleccionado);
     }
 }
@@ -75,7 +75,7 @@ function leerDatosPlato(plato){
         precio: plato.querySelector('h4').textContent,
         nombre: plato.querySelector('h5').textContent,
         descripcion: plato.querySelector('span').textContent,
-        id: plato.querySelector('.btnAgregar').getAttribute('data-id'),
+        id: plato.querySelector('.btnComprar').getAttribute('data-id'),
         cantidad: 1
         // MIRAR LA MANERA DE METER CANTIDAD
     }
@@ -109,8 +109,6 @@ function leerDatosPlato(plato){
 
 // Muestra la seleccion de platos en el Menu Seleccionado
 function menuSelecHtml() {
-
-    // limpiar html
     limpiarHTML();
     // recorre array de los platos del menu y genera html
     platosMenu.forEach( plato => {
@@ -130,7 +128,6 @@ function menuSelecHtml() {
 
         // Agrega HTML en tbody
         listaMenu.appendChild(row);
-
     })
 }
 
@@ -223,3 +220,18 @@ btEliminar.classList.add('onclick');
 // btEliminar.classList.add('');
 //console.log(btEliminar);
 
+
+//Modo admin
+
+let admin = document.getElementById("admin")
+admin = prompt("hola")
+
+
+
+const articulo = document.querySelectorAll(' .btnEliminar');
+for (const art of articulo){
+    art.addEventListener("click", function() {
+      this.parentElement.parentElement.parentElement.remove();
+      alert("Has eliminado este plato");
+    });
+  }
