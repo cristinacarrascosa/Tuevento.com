@@ -9,7 +9,7 @@ const listaMenu = document.querySelector('.table tbody');
 const btnEliminar = document.querySelector('.btnEliminar');
 const btnModificar = document.querySelector('.btnModificar');
 const btnAgregar = document.querySelector('.btnAgregar');
-const btnBorrarMenu = document.querySelector('.navbar a .borrar-menu');
+const btnBorrarMenu = document.querySelector('#borrar-menu');
 let platosMenu = [];
 console.log(btnBorrarMenu);
 
@@ -20,6 +20,13 @@ function cargarEventListeners() {
     listadoPlatos.addEventListener('click', modificarPlato);
     listadoPlatos.addEventListener('click', agregarPlato);
     listaMenu.addEventListener('click', eliminarSeleccion);
+
+    btnBorrarMenu.addEventListener('click', () => {
+        platosMenu = [];
+
+        limpiarHTML();
+    })
+
 }
 
 
@@ -49,10 +56,10 @@ function agregarPlato(e){
 
 function eliminarSeleccion(e) {
     if(e.target.classList.contains('borrar-seleccion')){
-        const cursoId = e.target.getAttribute('data-id');
+        const platoid = e.target.getAttribute('data-id');
 
         // Elimina del array platosMenu por el data-id
-        platosMenu = platosMenu.filter( plato => plato.id !== cursoId);
+        platosMenu = platosMenu.filter( plato => plato.id !== platoid); 
 
         menuSelecHtml(); 
     };
@@ -62,7 +69,7 @@ function eliminarSeleccion(e) {
 function leerDatosPlato(plato){
     //console.log(plato)
 
-    // creamos objero con el contenido del plato
+    // creamos objeto con el contenido del plato
     const infoPlato = {
         imagen: plato.querySelector('.imagen').src,
         precio: plato.querySelector('h4').textContent,
