@@ -346,11 +346,15 @@ h6,
     width: 50px;
 }
 
-.card{
-    float: right;
+
+.card-resumen {
+    float: center;
     margin-right: 20px;
-    width: 30%;
+    width: 40%;
+    text-align: center;
 }
+
+
 
 /* END RESERVAS */
 
