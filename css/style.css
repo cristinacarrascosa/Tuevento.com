@@ -359,7 +359,29 @@ h6,
 
 
 /* A partir de aquí modifica Cristina*/
-
+/* CSS del boton borrar-menu*/
+#borrar-menu {
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    text-align: center;
+    height: 38px;
+    padding: 0 30px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+}
+.borrar-seleccion {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+.offcanvas {
+    width: 500px;
+}
 
 /* para que se oculten los botones*/
 /* .btn-group-vertical{
