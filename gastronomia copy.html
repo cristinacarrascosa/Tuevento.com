@@ -121,6 +121,29 @@
 <!-- Body Start-->
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <!-- Canva editar -->
+        <div class="offcanvas offcanvas-end" id="demo">
+            <div class="offcanvas-header">
+            <h1 class="offcanvas-title">Modificar</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <table id="lista-modificar" class="table">
+                    <thead >
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            <button class="btn btn-secondary" type="button">A Button</button>
+            </div>
+        </div>
+
+
 
     <!-- Gastronomia Start -->
     <div class="container-fluid about py-5">
@@ -167,7 +190,7 @@
                                     </div>
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btnEliminar btn btn-primary">Eliminar</button>
-                                        <button type="button" class="btnModificar btn btn-primary">Modificar</button>
+                                        <button type="button" class="btnModificar btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#demo">Modificar</button>  
                                         <button type="button" class="btnComprar btn btn-primary" data-id="1">Comprar</button>
                                     </div>
                                 </div>
@@ -188,7 +211,7 @@
                                     </div>
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btnEliminar btn btn-primary">Eliminar</button>
-                                        <button type="button" class="btnModificar btn btn-primary">Modificar</button>
+                                        <button type="button" class="btnModificar btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#demo">Modificar</button>
                                         <button type="button" class="btnComprar btn btn-primary" data-id="2">Comprar</button>
                                     </div>
                                 </div>
@@ -209,7 +232,7 @@
                                     </div>
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btnEliminar btn btn-primary">Eliminar</button>
-                                        <button type="button" class="btnModificar btn btn-primary">Modificar</button>
+                                        <button type="button" class="btnModificar btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#demo">Modificar</button>
                                         <button type="button" class="btnComprar btn btn-primary" data-id="3">Comprar</button>
                                     </div>
                                 </div>
@@ -230,7 +253,7 @@
                                     </div>
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btnEliminar btn btn-primary">Eliminar</button>
-                                        <button type="button" class="btnModificar btn btn-primary">Modificar</button>
+                                        <button type="button" class="btnModificar btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#demo">Modificar</button>
                                         <button type="button" class="btnComprar btn btn-primary" data-id="4">Comprar</button>
                                     </div>
                                 </div>
@@ -251,7 +274,7 @@
                                     </div>
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btnEliminar btn btn-primary">Eliminar</button>
-                                        <button type="button" class="btnModificar btn btn-primary">Modificar</button>
+                                        <button type="button" class="btnModificar btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#demo">Modificar</button>
                                         <button type="button" class="btnComprar btn btn-primary" data-id="5">Comprar</button>
                                     </div>
                                 </div>
@@ -272,7 +295,7 @@
                                     </div>
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btnEliminar btn btn-primary">Eliminar</button>
-                                        <button type="button" class="btnModificar btn btn-primary">Modificar</button>
+                                        <button type="button" class="btnModificar btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#demo">Modificar</button>
                                         <button type="button" class="btnComprar btn btn-primary" data-id="6">Comprar</button>
                                     </div>
                                 </div>
@@ -293,7 +316,7 @@
                                     </div>
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btnEliminar btn btn-primary">Eliminar</button>
-                                        <button type="button" class="btnModificar btn btn-primary">Modificar</button>
+                                        <button type="button" class="btnModificar btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#demo">Modificar</button>
                                         <button type="button" class="btnComprar btn btn-primary" data-id="7">Comprar</button>
                                     </div>
                                 </div>
@@ -314,7 +337,7 @@
                                     </div>
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btnEliminar btn btn-primary">Eliminar</button>
-                                        <button type="button" class="btnModificar btn btn-primary">Modificar</button>
+                                        <button type="button" class="btnModificar btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#demo">Modificar</button>
                                         <button type="button" class="btnComprar btn btn-primary" data-id="8">Comprar</button>
                                     </div>
                                 </div>
@@ -703,6 +726,7 @@
         </div>
     </div>
     <!-- Gastronomia End -->
+    
 
     <!--Body End -->
 
