@@ -215,17 +215,6 @@ function changeData(e){
 
 
 }
-function onClick() {
-    let nombreModificado = (document.getElementById('nombre').value)
-    let nombre = document.querySelector('.titulo').textContent = nombreModificado
-
-
-    }
-
-
-
-
-
 
 
 
@@ -242,7 +231,6 @@ function menuSelectHtml() {
             <td><img src="${imagen}" width="100">
             <td>${nombre}</td>
             <td>${precio}</td>
-            <input class="inputCantidad" type="number" min="1" value=${cantidad}></input>
             <td>
                 <a href="#" class="borrar-seleccion" data-id="${id}"> X </a>
             </td>
