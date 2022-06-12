@@ -145,7 +145,7 @@ function modificarSelectHTML() {
         <div class="container mt-3">
         <h2>Textarea</h2>
         <p>Use the .form-control class to style textareas as well:</p>
-        <form action="/action_page.php">
+        <form action=>
           <div class="mb-3 mt-3">
             <label for="comment">Comments:</label>
             <textarea class="form-control" rows="5" id="comment" name="text"></textarea>

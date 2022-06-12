@@ -1,7 +1,12 @@
 
 // Variables
 const carrito = document.querySelector('#carrito');
+const modificar = document.querySelector('#modificar');
 const listadoPlatos = document.querySelector('#listado-platos');
+const contenedorModificar = document.querySelector('#lista-modificar tbody'); //donde se muestra modificar
+const modificar_articulo = document.getElementById('modificar_articulo')
+const aceptarModificacionBtn = document.querySelector('#modificarPlato'); // boton del canva de modificar
+
 // const aperitivos = document.querySelector('#aperitivos');
 let platos = document.querySelectorAll('.plato')// nodelist con todos los platos
 const imagenes = document.querySelectorAll('.imagen')
@@ -11,6 +16,7 @@ const btnModificar = document.querySelector('.btnModificar');
 const btnComprar = document.querySelector('.btnComprar');
 const btnBorrarMenu = document.querySelector('#borrar-menu');
 let platosMenu = [];
+let platosModificar = [];
 
 
 // Funcion para registrar todos los eventListeners
@@ -21,9 +27,10 @@ function cargarEventListeners() {
     listadoPlatos.addEventListener('click', agregarPlato);
     listaMenu.addEventListener('click', eliminarSeleccion);
 
+    
+
     btnBorrarMenu.addEventListener('click', () => {
         platosMenu = [];
-
         limpiarHTML();
     })
 
@@ -33,16 +40,15 @@ function cargarEventListeners() {
 // Funciones
 function eliminarPlato(e){
     if(e.target.classList.contains('btnEliminar')){
-        //console.log('pulsaste btnEliminar')
-        
+                
     }
     
 }
 
 function modificarPlato(e){
     if(e.target.classList.contains('btnModificar') ){
-        const platoSeleccionado = e.target.parentElement.parentElement;
-        //leerDatosPlato(platoSeleccionado); si usamos aquí esta funcion le agrega el plato al carrito
+        const platoSeleccionado =e.target.parentElement.parentElement;
+        leerDatosParaModificar(platoSeleccionado);//trabajando en esto ahora
     }
 }
 
@@ -65,10 +71,8 @@ function eliminarSeleccion(e) {
     };
 }
 
-// Leer los datos del plato
+// Leer los datos del plato para el carrito
 function leerDatosPlato(plato){
-    //console.log(plato)
-
     // creamos objeto con el contenido del plato
     const infoPlato = {
         imagen: plato.querySelector('.imagen').src,
@@ -77,9 +81,8 @@ function leerDatosPlato(plato){
         descripcion: plato.querySelector('span').textContent,
         id: plato.querySelector('.btnComprar').getAttribute('data-id'),
         cantidad: 1
-        // MIRAR LA MANERA DE METER CANTIDAD
+        // MIRAR LA MANERA DE METER CANTIDAD  si no podemos borrar la cantidad
     }
-
     // Devuelve true si el plato ya existe
     const existe = platosMenu.some( plato => plato.id === infoPlato.id );
     if (existe) {
@@ -95,15 +98,82 @@ function leerDatosPlato(plato){
         platosMenu = [...platos];
     } else {
         // agregamos al array de la seleccion del menu
-    platosMenu = [...platosMenu, infoPlato]
-        
+    platosMenu = [...platosMenu, infoPlato]  
     }
     
-
-   // console.log(platosMenu);
-
     // funcion que muestra la info en carrito
     menuSelecHtml();
+}
+
+
+function leerDatosParaModificar(plato) {
+    // creamos objeto con el contenido del plato
+    const infoPlato = {
+        imagen: plato.querySelector('.imagen').src,
+        precio: plato.querySelector('h4').textContent,
+        nombre: plato.querySelector('h5').textContent,
+        descripcion: plato.querySelector('span').textContent,
+        id: plato.querySelector('.btnComprar').getAttribute('data-id'),
+       
+    }
+    // Agrega elementos a ofcanva modificar
+    platosModificar = [infoPlato];
+    modificarSelectHTML();
+}
+
+
+// Muestra en ofcanva modificar
+function modificarSelectHTML() {
+    contenedorModificar.innerHTML = '';
+    platosModificar.forEach( (plato) => {
+        const {imagen, nombre, precio, descripcion} = plato;
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td><img src="${imagen}" width="100">
+            <td>${nombre}</td>
+            <td>${precio}</td>
+            <td>${descripcion}</td>
+        
+        `;
+
+        const div = document.createElement('div');
+        div.innerHTML = `
+        <div class="container mt-3" style=text-aling:left" >
+            <h4>Introduce los datos que deseas modificar</h4>
+            <div class="mb-3 mt-3">
+                <label for="imagen">Imagen: </label>
+                <input type = "file" id="imagen">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="nombre">Nombre:</label>
+                <textarea class="form-control" rows="2" cols="3" id="nombre">${nombre}</textarea>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="descripcion">Descripción:</label>
+                <textarea class="form-control" rows="3" cols="8" id="comment" name="text">${descripcion}</textarea>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" min="1" placeholder="${precio}">
+            </div> 
+        </div>
+        <button class="btn btn-primary id="cambiarDatos" type="button" onclick="onClick()">Cambiar</button>
+        `;
+        // Agrega el HTML en el tbody
+        contenedorModificar.appendChild(row);
+        modificar_articulo.appendChild(div);
+        }) 
+        
+}
+function onClick() {
+    let nombreModificado = (document.getElementById('nombre').value)
+    platosModificar.forEach( (plato) => {
+    const {imagen, nombre, precio, descripcion} = plato;
+
+    plato.nombre = nombreModificado
+    platosModificar = [infoPlato]
+    console.log(plato.nombre)
+     })
 }
 
 
@@ -140,6 +210,14 @@ function limpiarHTML() {
     }
 }
 
+// Eliminar gastronomia
+const articulo = document.querySelectorAll(' .btnEliminar');
+for (const art of articulo){
+    art.addEventListener("click", function() {
+      this.parentElement.parentElement.parentElement.remove();
+      alert(`Has eliminado este plato`);
+    });
+  }
 
 //console.log(1)
     // document.addEventListener('DOMContentLoaded', () => {
@@ -223,15 +301,8 @@ btEliminar.classList.add('onclick');
 
 //Modo admin
 
-let admin = document.getElementById("admin")
-admin = prompt("hola")
+// let admin = document.getElementById("admin")
+// admin = prompt("hola")
 
 
 
-const articulo = document.querySelectorAll(' .btnEliminar');
-for (const art of articulo){
-    art.addEventListener("click", function() {
-      this.parentElement.parentElement.parentElement.remove();
-      alert("Has eliminado este plato");
-    });
-  }
