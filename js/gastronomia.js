@@ -1,7 +1,10 @@
 
 // Variables
 const carrito = document.querySelector('#carrito');
+const modificar = document.querySelector('#modificar');
 const listadoPlatos = document.querySelector('#listado-platos');
+const contenedorModificar = document.querySelector('#lista-modificar tbody'); //donde se muestra modificar
+const aceptarModificacionBtn = document.querySelector('#modificarPlato'); // boton del canva de modificar
 // const aperitivos = document.querySelector('#aperitivos');
 let platos = document.querySelectorAll('.plato')// nodelist con todos los platos
 const imagenes = document.querySelectorAll('.imagen')
@@ -11,6 +14,7 @@ const btnModificar = document.querySelector('.btnModificar');
 const btnComprar = document.querySelector('.btnComprar');
 const btnBorrarMenu = document.querySelector('#borrar-menu');
 let platosMenu = [];
+let platosModificar = [];
 
 
 // Funcion para registrar todos los eventListeners
@@ -41,8 +45,8 @@ function eliminarPlato(e){
 
 function modificarPlato(e){
     if(e.target.classList.contains('btnModificar') ){
-        const platoSeleccionado = e.target.parentElement.parentElement;
-        //leerDatosPlato(platoSeleccionado); si usamos aquí esta funcion le agrega el plato al carrito
+        const platoSeleccionado =e.target.parentElement.parentElement;
+        leerDatosParaModificar(platoSeleccionado);//trabajando en esto ahora
     }
 }
 
@@ -65,9 +69,9 @@ function eliminarSeleccion(e) {
     };
 }
 
-// Leer los datos del plato
+// Leer los datos del plato para el carrito
 function leerDatosPlato(plato){
-    //console.log(plato)
+    
 
     // creamos objeto con el contenido del plato
     const infoPlato = {
@@ -77,8 +81,9 @@ function leerDatosPlato(plato){
         descripcion: plato.querySelector('span').textContent,
         id: plato.querySelector('.btnComprar').getAttribute('data-id'),
         cantidad: 1
-        // MIRAR LA MANERA DE METER CANTIDAD
+        // MIRAR LA MANERA DE METER CANTIDAD  si no podemos borrar la cantidad
     }
+    
 
     // Devuelve true si el plato ya existe
     const existe = platosMenu.some( plato => plato.id === infoPlato.id );
@@ -104,6 +109,40 @@ function leerDatosPlato(plato){
 
     // funcion que muestra la info en carrito
     menuSelecHtml();
+}
+
+
+function leerDatosParaModificar(plato) {
+    // creamos objeto con el contenido del plato
+    const infoPlato = {
+        imagen: plato.querySelector('.imagen').src,
+        precio: plato.querySelector('h4').textContent,
+        nombre: plato.querySelector('h5').textContent,
+        descripcion: plato.querySelector('span').textContent,
+        id: plato.querySelector('.btnComprar').getAttribute('data-id'),
+       
+    }
+    // Agrega elementos a ofcanva modificar
+    platosModificar = [infoPlato];
+    modificarSelectHTML();
+}
+
+// Muestra en ofcanva modificar
+function modificarSelectHTML() {
+    contenedorModificar.innerHTML = '';
+    platosModificar.forEach( (plato) => {
+        const {imagen, nombre, precio, descripcion} = plato;
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td><img src="${imagen}" width="100">
+            <td>${nombre}</td>
+            <td>${precio}</td>
+            <td>${descripcion}</td>
+        
+        `;
+        // Agrega el HTML en el tbody
+        contenedorModificar.appendChild(row);
+    })
 }
 
 
@@ -231,8 +270,8 @@ btEliminar.classList.add('onclick');
 
 //Modo admin
 
-let admin = document.getElementById("admin")
-admin = prompt("hola")
+// let admin = document.getElementById("admin")
+// admin = prompt("hola")
 
 
 
