@@ -27,7 +27,7 @@ function cargarEventListeners() {
     listadoPlatos.addEventListener('click', agregarPlato);
     listaMenu.addEventListener('click', eliminarSeleccion);
 
-    
+
 
     btnBorrarMenu.addEventListener('click', () => {
         platosMenu = [];
@@ -38,17 +38,44 @@ function cargarEventListeners() {
 
 
 // Funciones
+  //admin
+let adminBlock = document.getElementById("#admin")
+adminBlock.addEventListener("click", function(){
+  let pass = prompt("Introduce contraseña maestra")
+  if(pass == 'admin'){
+    reveladorDeSecretos();
+  }
+})
+let listaAperitivosInicial = document.getElementById("listaAperitivos").childNodes;
+console.log(listaAperitivosInicial)
+
+for (var i = 1; i <= 8; i++) {
+  listaAperitivosInicial[(i*2 - 1)].children[0].children[2].children[0].className += " escondido";
+  listaAperitivosInicial[(i*2 - 1)].children[0].children[2].children[1].className += " escondido";
+}
+function reveladorDeSecretos(){
+  for (var i = 1; i <= 8; i++) {
+    listaAperitivosInicial[(i*2 - 1)].children[0].children[2].children[0].classList.remove("escondido")
+    listaAperitivosInicial[(i*2 - 1)].children[0].children[2].children[1].classList.remove("escondido");
+  }
+}
+
+function adminPrompt(){
+  alert("hola")
+}
+
 function eliminarPlato(e){
     if(e.target.classList.contains('btnEliminar')){
-                
+
     }
-    
+
 }
 
 function modificarPlato(e){
     if(e.target.classList.contains('btnModificar') ){
         const platoSeleccionado =e.target.parentElement.parentElement;
         leerDatosParaModificar(platoSeleccionado);//trabajando en esto ahora
+        //console.log(platoSeleccionado);
     }
 }
 
@@ -65,9 +92,9 @@ function eliminarSeleccion(e) {
         const platoid = e.target.getAttribute('data-id');
 
         // Elimina del array platosMenu por el data-id
-        platosMenu = platosMenu.filter( plato => plato.id !== platoid); 
+        platosMenu = platosMenu.filter( plato => plato.id !== platoid);
 
-        menuSelecHtml(); 
+        menuSelectHtml();
     };
 }
 
@@ -98,11 +125,11 @@ function leerDatosPlato(plato){
         platosMenu = [...platos];
     } else {
         // agregamos al array de la seleccion del menu
-    platosMenu = [...platosMenu, infoPlato]  
+    platosMenu = [...platosMenu, infoPlato]
     }
-    
+
     // funcion que muestra la info en carrito
-    menuSelecHtml();
+    menuSelectHtml();
 }
 
 
@@ -114,11 +141,12 @@ function leerDatosParaModificar(plato) {
         nombre: plato.querySelector('h5').textContent,
         descripcion: plato.querySelector('span').textContent,
         id: plato.querySelector('.btnComprar').getAttribute('data-id'),
-       
+
     }
     // Agrega elementos a ofcanva modificar
     platosModificar = [infoPlato];
     modificarSelectHTML();
+    //console.log(infoPlato)
 }
 
 
@@ -126,15 +154,17 @@ function leerDatosParaModificar(plato) {
 function modificarSelectHTML() {
     limpiarHTML();
     contenedorModificar.innerHTML = '';
+    modificar_articulo.innerHTML = '';
+
     platosModificar.forEach( (plato) => {
-        const {imagen, nombre, precio, descripcion} = plato;
-        const row = document.createElement('tr');
+        let {imagen, nombre, precio, descripcion, id} = plato;
+        let row = document.createElement('tr');
         row.innerHTML = `
             <td><img src="${imagen}" width="100">
             <td>${nombre}</td>
             <td>${precio}</td>
             <td>${descripcion}</td>
-        
+
         `;
 
         const div = document.createElement('div');
@@ -156,35 +186,51 @@ function modificarSelectHTML() {
             <div class="mb-3 mt-3">
                 <label for="precio">Precio:</label>
                 <input type="number" id="precio" name="precio" min="1" placeholder="${precio}">
-            </div> 
+            </div>
         </div>
-        <button class="btn btn-primary id="cambiarDatos" type="button" onclick="onClick()">Cambiar</button>
+        <button class="btn btn-primary" id="cambiarDatos" type="button" onclick="changeData(${id})">Cambiar</button>
         `;
         // Agrega el HTML en el tbody
         contenedorModificar.appendChild(row);
         modificar_articulo.appendChild(div);
-        }) 
-        
+        })
+
 }
 
 
+function changeData(e){
+  let elementPosition = e*2 - 1;
+  let listaAperitivos = document.getElementById("listaAperitivos");
 
+  let nombre = $("#nombre")[0].value;
+  let descripcion = $("#comment")[0].value;
+  let precio = $("#precio")[0].value;
+
+
+  let children = listaAperitivos.childNodes;
+  console.log(children)
+  children[elementPosition].children[0].children[1].children[0].innerHTML = nombre;
+  children[elementPosition].children[0].children[1].children[1].innerHTML = descripcion;
+  children[elementPosition].children[0].children[0].children[1].innerHTML = precio + '.00€';
+
+
+}
 function onClick() {
     let nombreModificado = (document.getElementById('nombre').value)
     let nombre = document.querySelector('.titulo').textContent = nombreModificado
-    
-    
-    }
-  
 
-    
-   
-    
+
+    }
+
+
+
+
+
 
 
 
 // Muestra la seleccion de platos en el Menu Seleccionado
-function menuSelecHtml() {
+function menuSelectHtml() {
     limpiarHTML();
     // recorre array de los platos del menu y genera html
     platosMenu.forEach( plato => {
@@ -196,7 +242,7 @@ function menuSelecHtml() {
             <td><img src="${imagen}" width="100">
             <td>${nombre}</td>
             <td>${precio}</td>
-            <td>${cantidad}</td>
+            <input class="inputCantidad" type="number" min="1" value=${cantidad}></input>
             <td>
                 <a href="#" class="borrar-seleccion" data-id="${id}"> X </a>
             </td>
@@ -301,6 +347,3 @@ const btEliminar = document.createElement('button');
 btEliminar.classList.add('onclick');
 btEliminar.classList.add('borraPlato()');
 btEliminar.classList.add('onclick');
-
-
-

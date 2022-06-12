@@ -381,7 +381,7 @@ h6,
     text-decoration: none;
     color: white;
     font-weight: bold;
-    
+
 }
 .offcanvas {
     width: 500px;
@@ -391,3 +391,16 @@ h6,
 /* .btn-group-vertical{
     visibility: hidden;
 } */
+
+#aperitivos div.textoMedio {
+  width: 70%;
+}
+
+.inputCantidad {
+  width: 50%;
+  border: 1px solid grey;
+}
+
+.escondido {
+  display:none!important;
+}
