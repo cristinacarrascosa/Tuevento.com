@@ -124,6 +124,7 @@ function leerDatosParaModificar(plato) {
 
 // Muestra en ofcanva modificar
 function modificarSelectHTML() {
+    limpiarHTML();
     contenedorModificar.innerHTML = '';
     platosModificar.forEach( (plato) => {
         const {imagen, nombre, precio, descripcion} = plato;
@@ -165,16 +166,21 @@ function modificarSelectHTML() {
         }) 
         
 }
+
+
+
 function onClick() {
     let nombreModificado = (document.getElementById('nombre').value)
-    platosModificar.forEach( (plato) => {
-    const {imagen, nombre, precio, descripcion} = plato;
+    let nombre = document.querySelector('.titulo').textContent = nombreModificado
+    
+    
+    }
+  
 
-    plato.nombre = nombreModificado
-    platosModificar = [infoPlato]
-    console.log(plato.nombre)
-     })
-}
+    
+   
+    
+
 
 
 // Muestra la seleccion de platos en el Menu Seleccionado
@@ -210,7 +216,7 @@ function limpiarHTML() {
     }
 }
 
-// Eliminar gastronomia
+// Eliminar aritulo
 const articulo = document.querySelectorAll(' .btnEliminar');
 for (const art of articulo){
     art.addEventListener("click", function() {
@@ -295,14 +301,6 @@ const btEliminar = document.createElement('button');
 btEliminar.classList.add('onclick');
 btEliminar.classList.add('borraPlato()');
 btEliminar.classList.add('onclick');
-// btEliminar.classList.add('');
-//console.log(btEliminar);
-
-
-//Modo admin
-
-// let admin = document.getElementById("admin")
-// admin = prompt("hola")
 
 
 
