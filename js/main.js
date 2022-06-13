@@ -1,5 +1,5 @@
 // ===========> VARIABLES <===================
-
+/** ESTE DOCUMENTO VIENE POR DEFECTO EN LA PLANTILLA */
 
 
 // ===========> FUNCIONES <===================

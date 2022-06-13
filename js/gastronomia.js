@@ -1,3 +1,7 @@
+/** AUTORES:
+ * CRISTINA CARRASCOSA TORRES 50%
+ * RAIMON VILAR MORERA 50%
+ */
 
 // Variables
 const carrito = document.querySelector('#carrito');
@@ -44,6 +48,8 @@ adminBlock.addEventListener("click", function(){
   let pass = prompt("Introduce contraseña maestra")
   if(pass == 'admin'){
     reveladorDeSecretos();
+  } else {
+    alert("Contraseña incorrecta")
   }
 })
 let listaAperitivosInicial = document.getElementById("listaAperitivos").childNodes;

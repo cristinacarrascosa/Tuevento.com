@@ -1,3 +1,8 @@
+/** AUTORES:
+ * CRISTINA CARRASCOSA TORRES 50%
+ * RAIMON VILAR MORERA 50%
+ */
+
 
 // Variables
 const carrito = document.querySelector('#carrito');
@@ -44,17 +49,19 @@ adminBlock.addEventListener("click", function(){
   let pass = prompt("Introduce contraseña maestra")
   if(pass == 'admin'){
     reveladorDeSecretos();
+  } else {
+    alert("Contraseña incorrecta")
   }
 })
 let listaAperitivosInicial = document.getElementById("listaAperitivos").childNodes;
 console.log(listaAperitivosInicial)
 
-for (var i = 1; i <= 8; i++) {
+for (var i = 1; i <= 4; i++) {
   listaAperitivosInicial[(i*2 - 1)].children[0].children[2].children[0].className += " escondido";
   listaAperitivosInicial[(i*2 - 1)].children[0].children[2].children[1].className += " escondido";
 }
 function reveladorDeSecretos(){
-  for (var i = 1; i <= 8; i++) {
+  for (var i = 1; i <= 4; i++) {
     listaAperitivosInicial[(i*2 - 1)].children[0].children[2].children[0].classList.remove("escondido")
     listaAperitivosInicial[(i*2 - 1)].children[0].children[2].children[1].classList.remove("escondido");
   }
