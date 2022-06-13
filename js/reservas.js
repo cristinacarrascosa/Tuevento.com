@@ -148,12 +148,6 @@ function validarEmail(correo) {
     return er.test(correo);
 }
 
-// Comprueba la fecha es despues del dia hoy
-/* function testDate(date) {
-    
-} */
-
-
 
 // Reset formulario de datos personales.
 function resetFormDatosPers() {
