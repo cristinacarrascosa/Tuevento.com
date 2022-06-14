@@ -330,18 +330,31 @@ h6,
 /*START RESERVAS*/
 
 #formulario-reserva {
-    background-color: darkgray;
+    background-color: aqua;
+    text-align:initial;
+    padding-left: 25px;
 
 }
 
-#form-datos-personales, #form-espacio, #form-gastronomia {
+#div-datos-personales, #div-espacio, #div-gastronomia {
     padding: 25px 50px;
     background-color: aqua;
+    text-align:start;
 }
 
 #numPlatos {
-    
+    width: 50px;
 }
+
+
+.card-resumen {
+    float: center;
+    margin-right: 20px;
+    width: 40%;
+    text-align: center;
+}
+
+
 
 /* END RESERVAS */
 
@@ -350,6 +363,44 @@ h6,
 
 
 /* A partir de aquí modifica Cristina*/
-.card-img-top{
-    height: 200px;
+/* CSS del boton borrar-menu*/
+#borrar-menu {
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    text-align: center;
+    height: 38px;
+    padding: 0 30px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+}
+.borrar-seleccion {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+}
+.offcanvas {
+    width: 500px;
+}
+
+/* para que se oculten los botones*/
+/* .btn-group-vertical{
+    visibility: hidden;
+} */
+
+#aperitivos div.textoMedio {
+  width: 70%;
+}
+
+.inputCantidad {
+  width: 50%;
+  border: 1px solid grey;
+}
+
+.escondido {
+  display:none!important;
 }

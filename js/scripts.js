@@ -6,6 +6,7 @@
 //
 // Scripts
 // 
+/** ESTE DOCUMENTO VIENE POR DEFECTO EN LA PLANTILLA */
 
 window.addEventListener('DOMContentLoaded', event => {
 
